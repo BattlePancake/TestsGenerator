@@ -26,8 +26,8 @@ jobs:
       - name: Build solution
         run: dotnet build --configuration Release --no-restore
 
-      - name: Run tests
-        run: dotnet test SauceDemoAutomation.Pipeline/SauceDemoAutomation.Pipeline.csproj --configuration Release --no-build
-
       - name: Run pipeline (generates outputs)
         run: dotnet run --project SauceDemoAutomation.Pipeline/SauceDemoAutomation.Pipeline.csproj --configuration Release
+
+      - name: Run tests
+        run: dotnet test SauceDemoAutomation.Pipeline/SauceDemoAutomation.Pipeline.csproj --configuration Release --no-build
