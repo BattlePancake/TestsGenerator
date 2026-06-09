@@ -28,16 +28,16 @@ jobs:
 
       - name: Run pipeline (generates outputs)
         run: dotnet run --project SauceDemoAutomation.Pipeline/SauceDemoAutomation.Pipeline.csproj --configuration Release
-          # Upload test results
-        - name: Upload Test Results
-          uses: actions/upload-artifact@v3
-          with:
-            name: test-results
-            path: Outputs/TestResults/
-          # Upload LLM outputs
-        - name: Upload LLM Outputs
-          uses: actions/upload-artifact@v3
-          with:
-            name: llm-outputs
-            path: Outputs/LlmOutputs/
+      # Upload test results
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: Outputs/TestResults/
+      # Upload LLM outputs
+      - name: Upload LLM Outputs
+        uses: actions/upload-artifact@v3
+        with:
+          name: llm-outputs
+          path: Outputs/LlmOutputs/
 # Run tests step removed – pipeline already runs tests
