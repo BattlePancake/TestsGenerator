@@ -34,7 +34,7 @@ namespace SauceDemoAutomation.Pipeline
             Console.ResetColor();
             Console.WriteLine($"Solution Directory Resolved: {solutionDir}\n");
 
-            string inputJsonPath = Path.Combine(solutionDir, "input_test_cases.json");
+            string inputJsonPath = Path.Combine(solutionDir, "Inputs", "input_test_cases.json");
             string frameworkProjectPath = Path.Combine(solutionDir, "SauceDemoAutomation.Framework", "SauceDemoAutomation.Framework.csproj");
             string generatedTestsPath = Path.Combine(solutionDir, "SauceDemoAutomation.Framework", "GeneratedTests.cs");
             
